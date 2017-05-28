@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: red;
+            border-top-right-radius: 10px;
+            /*添加过渡*/
+            transition:all 1s;
+            position: absolute;
+        }
+        div:hover{
+            /*传入旋转的角度，如果正值，则进行顺时针旋转*/
+            /*transform: rotate(90deg);*/
+            /*如果传入负值，则逆时针旋转*/
+            transform: rotate(90deg);
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul {
+				width: 500px;
+			}
+			li{
+				list-style: none;
+			}
+			#one {
+				float: left;
+				width: 200px;height: 200px;
+				background-color: black;
+				border-bottom: 5px solid blue; 
+				transition: all 0.5s;
+				transform-origin: right bottom;
+			}
+			#two {
+				float: left;
+				width: 200px;height: 200px;
+				background-color: red;
+				/*border-bottom: 5px solid blue;*/ 
+				transition: all 0.5s;
+				/*transform-origin: left bottom;*/
+			}
+			#one:hover{
+				/*transform: rotate(90deg);*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<button>dian</button>
+		<ul>
+			<li>
+				<div id="one"></div>
+				<div id="two"></div>
+			</li>
+			<li>
+				<div id="one"></div>
+				<div id="two"></div>
+			</li>
+		</ul>
+	</body>
+
+</html>
+<script src="js/jquery.rotate.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+	/*$("#one").rotate({ 
+   bind: 
+     { 
+        mouseover : function() { 
+            $(this).rotate({animateTo:180});
+        },
+        mouseout : function() { 
+            $(this).rotate({animateTo:0});
+        }
+     } 
+   
+});*/
+	$("ul").mouseenter(function(){
+		$("#one").css('transform',"rotate(" + 90 + "deg)")
+	})
+	$("ul").mouseleave(function(){
+		$("#one").css('transform',"rotate(" + 0 + "deg)")
+	})
+</script>

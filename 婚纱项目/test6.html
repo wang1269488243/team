@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+         .li-long{
+            width: 117px;
+            height: 57px;
+            list-style: none;
+        }
+        
+
+         /*li.li-long i{*/
+            /*position: absolute;*/
+            /*width: 0;*/
+            /*height: 0;*/
+            /*border-width: 4px;*/
+            /*border-style: solid;*/
+            /*border-color: #bc2e2e transparent transparent transparent;*/
+            /*right: 2px;*/
+            /*top: 28px;*/
+        /*}*/
+         .li-long i{
+            width: 978px;
+            height: 443px;
+            /*position: absolute;*/
+            /*top: 57px;*/
+            /*right: -100px;*/
+            /*display: block;*/
+            /*background: url("images/game-list.bmp");*/
+             background-color: red;
+
+            /*z-index: 99;*/
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+//            $("#test123").parent().hover(
+//                    function () {
+//                        $("#tes123").slideDown()
+//                    }, function () {
+//                        $("#test123").slideUp();
+//                    })
+
+            $("li").on("mouseenter", function () {
+                $("i").slideDown();
+                    //.css("display","block");
+                console.log(123);
+
+            })
+
+            $("li").parent().on("mouseleave", function () {
+                $("i").slideUp();
+                //css("display","none");
+                console.log(456);
+            })
+        })
+    </script>
+</head>
+<body>
+<li class="li-long">
+    <a href="#">网易游戏全目录</a><i></i>
+</li>
